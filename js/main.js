@@ -36,8 +36,40 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  const carousel = document.querySelector(".auto-carousel-track");
+  if (carousel) {
+    const imgs = carousel.querySelectorAll(".auto-carousel-img");
+    const leftBtn = document.querySelector(".carousel-arrow--left");
+    const rightBtn = document.querySelector(".carousel-arrow--right");
+    let current = 0;
+    let autoTimer;
+
+    function goTo(index) {
+      current = (index + imgs.length) % imgs.length;
+      carousel.style.transform = `translateX(-${current * 100}%)`;
+    }
+
+    function startAuto() {
+      autoTimer = setInterval(() => goTo(current + 1), 3500);
+    }
+
+    function resetAuto() {
+      clearInterval(autoTimer);
+      startAuto();
+    }
+
+    if (leftBtn) {
+      leftBtn.addEventListener("click", () => { goTo(current - 1); resetAuto(); });
+    }
+    if (rightBtn) {
+      rightBtn.addEventListener("click", () => { goTo(current + 1); resetAuto(); });
+    }
+
+    startAuto();
+  }
+
   document.addEventListener("click", (e) => {
-    if (e.target.matches(".gallery-main-img, .travail-card-img, .rotating-gallery img")) {
+    if (e.target.matches(".gallery-main-img, .travail-card-img")) {
       const overlay = document.createElement("div");
       overlay.className = "lightbox";
       overlay.innerHTML = `<img src="${e.target.src}" alt="${e.target.alt}">`;

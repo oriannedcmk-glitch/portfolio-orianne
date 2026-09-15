@@ -29,6 +29,18 @@
       <h1 class="page-title">Loisirs</h1>
       <p class="page-intro">Découvrez mes centres d'intérêts et mes passions !</p>
 
+      <!-- Carrousel automatique -->
+      <div class="auto-carousel">
+        <button class="carousel-arrow carousel-arrow--left" aria-label="Précédent">&#10094;</button>
+        <div class="auto-carousel-track">
+          <img src="assets/images/chien.jpg" alt="Animaux" class="auto-carousel-img">
+          <img src="assets/images/dessin-citrouille.jpg" alt="Dessins" class="auto-carousel-img">
+          <img src="assets/images/dune-pilat.jpg" alt="Randonnée" class="auto-carousel-img">
+          <img src="assets/images/fleur.jpg" alt="Photos" class="auto-carousel-img">
+        </div>
+        <button class="carousel-arrow carousel-arrow--right" aria-label="Suivant">&#10095;</button>
+      </div>
+
       <!-- Animaux -->
       <div class="loisir-section">
         <div class="loisir-content">
@@ -70,10 +82,16 @@
           </p>
         </div>
         <div class="loisir-gallery-wrap">
-          <div class="rotating-gallery">
-            <img src="assets/images/dessin-anime.jpg" alt="Dessin manga">
-            <img src="assets/images/dessin-citrouille.jpg" alt="Dessin citrouille aquarelle">
-            <img src="assets/images/dessin-misora.jpg" alt="Création graphique">
+          <div data-gallery>
+            <div class="gallery-main">
+              <img src="assets/images/dessin-anime.jpg" alt="Dessin manga" class="gallery-main-img">
+            </div>
+            <div class="gallery-thumbs">
+              <img src="assets/images/dessin-anime.jpg" alt="Dessin manga" class="gallery-thumb active">
+              <img src="assets/images/dessin-citrouille.jpg" alt="Dessin citrouille aquarelle" class="gallery-thumb">
+              <img src="assets/images/dessin-misora.jpg" alt="Création graphique" class="gallery-thumb">
+            </div>
+            <div class="gallery-counter"><span class="gallery-current">1</span> / <span class="gallery-total">3</span></div>
           </div>
         </div>
       </div>
@@ -136,6 +154,22 @@
             <div class="gallery-counter"><span class="gallery-current">1</span> / <span class="gallery-total">5</span></div>
           </div>
         </div>
+      </div>
+
+      <!-- Mini-galerie inclinée -->
+      <div class="tilted-gallery">
+        <img src="assets/images/chien.jpg" alt="Chien">
+        <img src="assets/images/hamster.jpg" alt="Hamster">
+        <img src="assets/images/dessin-anime.jpg" alt="Dessin manga">
+        <img src="assets/images/dessin-citrouille.jpg" alt="Dessin citrouille">
+        <img src="assets/images/dessin-misora.jpg" alt="Création graphique">
+        <img src="assets/images/torrent-montagne.jpg" alt="Torrent">
+        <img src="assets/images/dune-pilat.jpg" alt="Dune du Pilat">
+        <img src="assets/images/montagne.jpg" alt="Montagne">
+        <img src="assets/images/fleur.jpg" alt="Fleur">
+        <img src="assets/images/peche-plage.jpg" alt="Coucher de soleil">
+        <img src="assets/images/plage-coquillage.jpg" alt="Coquillage">
+        <img src="assets/images/photo-artistique.jpg" alt="Portrait artistique">
       </div>
 
     </section>
