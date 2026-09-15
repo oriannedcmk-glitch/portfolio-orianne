@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   document.addEventListener("click", (e) => {
-    if (e.target.matches(".gallery-main-img, .travail-card-img")) {
+    if (e.target.matches(".gallery-main-img, .travail-card-img, .rotating-gallery img")) {
       const overlay = document.createElement("div");
       overlay.className = "lightbox";
       overlay.innerHTML = `<img src="${e.target.src}" alt="${e.target.alt}">`;
