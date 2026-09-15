@@ -100,8 +100,8 @@ h1, h2, h3 {
 }
 
 .logo-leaf {
-  width: 22px;
-  height: 22px;
+  height: 28px;
+  width: auto;
   flex-shrink: 0;
 }
 
