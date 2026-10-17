@@ -24,6 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const mainImg = gallery.querySelector(".gallery-main-img");
     const thumbs = gallery.querySelectorAll(".gallery-thumb");
     const counter = gallery.querySelector(".gallery-current");
+    const total = gallery.querySelector(".gallery-total");
+    if (total) total.textContent = thumbs.length;
 
     thumbs.forEach((thumb, i) => {
       thumb.addEventListener("click", () => {
