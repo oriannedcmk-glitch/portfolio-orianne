@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
       thumb.addEventListener("click", () => {
         mainImg.src = thumb.src;
         mainImg.alt = thumb.alt;
+        mainImg.style.objectPosition = thumb.style.objectPosition;
         thumbs.forEach((t) => t.classList.remove("active"));
         thumb.classList.add("active");
         if (counter) counter.textContent = i + 1;
