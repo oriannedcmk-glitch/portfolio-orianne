@@ -330,6 +330,58 @@ h1, h2, h3 {
   margin-top: 16px;
 }
 
+/* ===== Expérience ===== */
+.timeline {
+  max-width: 760px;
+  margin: 0 auto;
+  border-left: 2px solid var(--color-accent);
+  padding-left: 32px;
+  text-align: left;
+}
+
+.timeline-item {
+  position: relative;
+  padding-bottom: 40px;
+  animation: fadeInUp 0.6s ease backwards;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -40px;
+  top: 6px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--color-white);
+  border: 2px solid var(--color-accent);
+}
+
+.timeline-date {
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.timeline-item h2 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 4px 0;
+}
+
+.timeline-place {
+  font-size: 0.92rem;
+  color: #777;
+  margin-bottom: 8px;
+}
+
+.timeline-item ul {
+  padding-left: 20px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
 /* ===== Loisirs — Sections empilées ===== */
 .loisir-section {
   display: grid;
@@ -364,6 +416,14 @@ h1, h2, h3 {
   text-transform: uppercase;
   margin-bottom: 20px;
   color: var(--color-heading);
+}
+
+.loisir-icon {
+  display: inline-block;
+  height: 1.4em;
+  width: auto;
+  vertical-align: middle;
+  margin-left: 8px;
 }
 
 .loisir-content p {
@@ -480,6 +540,7 @@ h1, h2, h3 {
 
 .gallery-thumbs {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   margin-top: 12px;
 }
