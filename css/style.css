@@ -581,6 +581,32 @@ h1, h2, h3 {
 }
 
 /* ===== Travaux ===== */
+.competences {
+  display: grid;
+  gap: 24px;
+}
+
+.competence {
+  background: var(--color-accent-light);
+  border-left: 3px solid var(--color-accent);
+  border-radius: 4px;
+  padding: 28px 32px;
+  text-align: left;
+  animation: fadeInUp 0.6s ease backwards;
+}
+
+.competence h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.competence p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #555;
+}
+
 .travaux-intro {
   text-align: center !important;
   max-width: 720px;
@@ -815,6 +841,10 @@ h1, h2, h3 {
 }
 
 @media (max-width: 768px) {
+  .competence {
+    padding: 20px;
+  }
+
   .navbar .container {
     padding: 0 24px;
     gap: 16px;
